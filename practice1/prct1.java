@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class prct1{
 
@@ -13,8 +14,38 @@ public class prct1{
 
     public static void main (String args[]) {
 
-        int[] array1 = { 2, 3, 4 };
-        System.out.println("Array sum = " + Arrays.stream(array1).sum());
+        {
+            System.out.println("numbers for sum1");
+            Scanner input = new Scanner(System.in);
+            String[] numbers = input.nextLine().split(" ");
+            int sum = 0;
+            for(int i = 0; i < numbers.length; i++) {
+                sum += Integer.parseInt(numbers[i]);
+            }
+            System.out.println("sum1: " + sum);
+
+            System.out.println("numbers for sum2");
+            Scanner input2 = new Scanner(System.in);
+            String[] numbers2 = input2.nextLine().split(" ");
+            int sum2 = 0;
+            int i = 0;
+            while(numbers2.length != i) {
+                sum2 += Integer.parseInt(numbers2[i]);
+                i++;
+            }
+            System.out.println("sum2: " + sum2);
+
+            System.out.println("numbers for sum3");
+            Scanner input3 = new Scanner(System.in);
+            String[] numbers3 = input3.nextLine().split(" ");
+            int sum3 = 0;
+            int i3 = 0;
+            do {
+                sum3 += Integer.parseInt(numbers3[i3]);
+                i3++;
+            } while(numbers3.length != i3);
+            System.out.println("sum3: " + sum3);
+        }
 
         System.out.println("Arguments = " + Arrays.toString(args));
 
@@ -46,10 +77,10 @@ public class prct1{
         Arrays.sort(array);
         System.out.println("Sorted Math.random: " + Arrays.toString(array));
 
-        java.util.Scanner in = new java.util.Scanner(System.in, "ibm866");
+        Scanner in = new Scanner(System.in);
         System.out.print("Type a number for factorial: ");
         int factorial_base = in.nextInt();
-        in.close();
+
 
         System.out.println("Factorial result: " + get_factorial(factorial_base));
     }
