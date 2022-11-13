@@ -15,7 +15,7 @@ public class prct2 {
 
 
         Dog wolf = new Dog("Grey", 3);
-        //wolf.set_age(3); //reset age
+        //wolf.setAge(3); //reset age
         System.out.println(wolf);
 
         Dog dogs[] = { new Dog("Black", 6), new Dog("White", 9), new Dog("Purple", 1) };
