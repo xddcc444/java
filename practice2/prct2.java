@@ -8,10 +8,10 @@ public class prct2 {
 
 
         Ball ball = new Ball(7);
-        ball.display_info();
+        ball.displayInfo();
 
         Book book = new Book("ShortStories", 123);
-        book.display_info();
+        book.displayInfo();
 
 
         Dog wolf = new Dog("Grey", 3);
@@ -21,14 +21,14 @@ public class prct2 {
         Dog dogs[] = { new Dog("Black", 6), new Dog("White", 9), new Dog("Purple", 1) };
 
 
-        Dog_nursery dog_nursery = new Dog_nursery();
-        System.out.println(dog_nursery);//create nursery
+        DogNursery dogNursery = new DogNursery();
+        System.out.println(dogNursery);//create nursery
 
-        dog_nursery.add_dog(wolf);
-        System.out.println(dog_nursery);//test adding one dog
+        dogNursery.addDog(wolf);
+        System.out.println(dogNursery);//test adding one dog
 
-        dog_nursery.add_dogs(dogs);
-        System.out.println(dog_nursery);//test adding some dogs
+        dogNursery.addDogs(dogs);
+        System.out.println(dogNursery);//test adding some dogs
     }
 }
 
@@ -52,66 +52,65 @@ class Dog {
         System.out.println("\nAdded Dog object with name: " + this.name + " (created)");
     }
     // Age setter
-    public void set_age(int age) {
+    public void setAge(int age) {
         if (age > 0 && age < 100) {
             this.age = age;
-            //System.out.println("Dog's age set as: " + this.age);
         }
     }
     // Age getter
-    public int get_age() {
+    public int getAge() {
         return this.age;
     }
     // Name setter
-    public void set_name(String name) {
+    public void setName(String name) {
         this.name = name;
         System.out.println("Dog name set as: " + this.name);
     }
     // Name getter
-    public String get_name() {
+    public String getName() {
         return this.name;
     }
 
-    public int get_human_age() {
+    public int getHumanAge() {
         return this.age * 7;
     }
 
     public String toString() {
-        return "Dog " + get_name() + " with age " + get_age();
+        return "Dog " + getName() + " with age " + getAge();
     }
 }
 
-class Dog_nursery {
-    private List<Dog> dog_nursery_array = new ArrayList<Dog>();
+class DogNursery {
+    private List<Dog> dogNurseryArray = new ArrayList<Dog>();
     {
         System.out.println("\nAdded Dog nursery object (created)");
     }
     // test on one dog
-    public void add_dog(Dog dog) {
-        this.dog_nursery_array.add(dog);
+    public void addDog(Dog dog) {
+        this.dogNurseryArray.add(dog);
         System.out.println(dog + ". This dog was added into nursery successfully");
     }
     // test on multiple dogs
-    public void add_dogs(Dog dogs[]) {
-        this.dog_nursery_array.addAll(new ArrayList<Dog>(Arrays.asList(dogs)));
+    public void addDogs(Dog dogs[]) {
+        this.dogNurseryArray.addAll(new ArrayList<Dog>(Arrays.asList(dogs)));
         System.out.println("Dogs: " + Arrays.toString(dogs) + " added into the dog nursery successfully");
     }
     public String toString() {
-        if (!this.dog_nursery_array.isEmpty()) return "Dog nursery: " + this.dog_nursery_array;
+        if (!this.dogNurseryArray.isEmpty()) return "Dog nursery: " + this.dogNurseryArray;
         else return "Dog nursery empty!";
     }
 }
 
 class Ball {
     int radius;
-    int diametr;
+    int diameter;
     Ball(int radius) {
         this.radius = radius;
-        this.diametr = this.radius * 2;
+        this.diameter = this.radius * 2;
         System.out.println("\nAdded Ball object (created)");
     }
-    void display_info() {
-        System.out.printf("Radius: %s \tDiameter: %d\n", this.radius, this.diametr);
+    void displayInfo() {
+        System.out.printf("Radius: %s \tDiameter: %d\n", this.radius, this.diameter);
     }
 }
 
@@ -123,7 +122,7 @@ class Book {
         this.pages = pages;
         System.out.println("\nAdded Book object (created)");
     }
-    void display_info() {
+    void displayInfo() {
         System.out.printf("Book's name: %s \tPages: %d\n", this.name, this.pages);
     }
 }
