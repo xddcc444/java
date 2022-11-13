@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class prct1{
 
-    public static int get_factorial(int factorial_base){
-        int factorial_result = 1;
-        for (int i = 1; i <= factorial_base; i++) {
-            factorial_result *= i;
+    public static int getFactorial(int factorialBase){
+        int factorialResult = 1;
+        for (int i = 1; i <= factorialBase; i++) {
+            factorialResult *= i;
         }
-        return factorial_result;
+        return factorialResult;
     }
 
     public static void main (String args[]) {
@@ -58,15 +58,15 @@ public class prct1{
             System.out.printf("%f, ", result);// formatted output
         }
 
-        int[] array = new int[(int) (Math.random() * 15)];
+        int[] array = new int[(int) (Math.random() * 40)];
         for (int i =0; i < array.length; i++){
             array[i] = (int) (Math.random() * 1000);
         }
 
         Random random = new Random();
-        int[] arrayR = new int[(int) (random.nextInt(15))];
+        int[] arrayR = new int[(int) (random.nextInt(40))];
         for (int i =0; i < arrayR.length; i++){
-            arrayR[i] = (int) (random.nextInt(1000));
+            arrayR[i] = (random.nextInt(1000));
         }
 
         System.out.println("\nRandomized with Random: " + Arrays.toString(arrayR));
@@ -81,7 +81,6 @@ public class prct1{
         System.out.print("Type a number for factorial: ");
         int factorial_base = in.nextInt();
 
-
-        System.out.println("Factorial result: " + get_factorial(factorial_base));
+        System.out.println("Factorial result: " + getFactorial(factorial_base));
     }
 }
