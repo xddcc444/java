@@ -79,8 +79,8 @@ public class prct1{
 
         Scanner in = new Scanner(System.in);
         System.out.print("Type a number for factorial: ");
-        int factorial_base = in.nextInt();
+        int factorialBase = in.nextInt();
 
-        System.out.println("Factorial result: " + getFactorial(factorial_base));
+        System.out.println("Factorial result: " + getFactorial(factorialBase));
     }
 }
