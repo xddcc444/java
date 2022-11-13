@@ -13,34 +13,34 @@ abstract class Shape {
     }
 
     // Color getter
-    String get_color() {
+    String getColor() {
         return this.color;
     }
 
     // Color setter
-    void set_color(String color) {
+    void setColor(String color) {
         this.color = color;
         System.out.println("Shape's color set as: " + this.color);
     }
 
     // Filled getter
-    boolean is_filled() {
+    boolean isFilled() {
         return this.filled;
     }
 
     // Filled setter
-    void set_filled(boolean filled) {
+    void setFilled(boolean filled) {
         this.filled = filled;
         System.out.println("Shape fullness set as: " + this.filled);
     }
 
     // Area getter
-    double get_area() {
+    double getArea() {
         return 0.0;
     }
 
     // Perimeter getter
-    double get_perimeter() {
+    double getPerimeter() {
         return 0.0;
     }
 

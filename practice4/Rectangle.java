@@ -3,28 +3,28 @@ class Rectangle extends Shape {
     protected double sideB;
 
     Rectangle() {
-        super.set_color("blue");
-        super.set_filled(false);
+        super.setColor("blue");
+        super.setFilled(false);
         System.out.println("Added Rectangle object (created)");
     }
 
 
 
     Rectangle(double width, double length, String color, boolean filled) {
-        super.set_color("blue");
-        super.set_filled(false);
+        super.setColor("blue");
+        super.setFilled(false);
         this.sideA = width;
         this.sideB = length;
         System.out.println("Added Rectangle object (created)");
     }
 
     // Width getter
-    double get_width() {
+    double getWidth() {
         return this.sideA;
     }
 
     // Width setter
-    void set_width(double width) {
+    void setWidth(double width) {
         if (width > 0) {
             this.sideA = width;
             System.out.println("Rectangle width set as: " + this.sideA);
@@ -34,12 +34,12 @@ class Rectangle extends Shape {
     }
 
     // Length getter
-    double get_length() {
+    double getLength() {
         return this.sideB;
     }
 
     // Width setter
-    void set_length(double length) {
+    void setLength(double length) {
         if (length > 0) {
             this.sideB = length;
             System.out.println("Rectangle length set as: " + this.sideB);
@@ -49,12 +49,12 @@ class Rectangle extends Shape {
     }
 
     @Override
-    double get_area() {
+    double getArea() {
         return this.sideB * this.sideA;
     }
 
     @Override
-    double get_perimeter() {
+    double getPerimeter() {
         return 2 * (this.sideB + this.sideA);
     }
 

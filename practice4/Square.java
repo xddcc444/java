@@ -1,20 +1,20 @@
 class Square extends Rectangle{
 
     Square(double side, String color, boolean filled) {
-        super.set_color("blue");
-        super.set_filled(false);
+        super.setColor("blue");
+        super.setFilled(false);
         this.sideA = side;
         this.sideB = side;
         System.out.println("Added Square object (created)");
     }
 
     // Side getter
-    double get_side() {
+    double getSide() {
         return this.sideA;
     }
 
     // Side setter
-    void set_side(double side) {
+    void setSide(double side) {
         if (side > 0) {
             this.sideA = side;
             this.sideB = side;
